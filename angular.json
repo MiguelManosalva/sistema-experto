@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "appProductividad"
+    }
+  },
+  "defaultProject": "appProductividad",
+  "cli": {
+    "analytics": "479087c7-f194-4573-8c34-aada7576bef2"
+  }
 }

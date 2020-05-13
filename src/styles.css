@@ -65,6 +65,7 @@ input::placeholder {
 }
 
 .btn-outline-primary {
+  background: #FFF;
   color: #4b638b;
   border: 2px solid;
   border-color: #4b638b;
@@ -108,3 +109,6 @@ input::placeholder {
   }
 
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
