@@ -14,4 +14,6 @@ export class BuscadorComponent {
 
   @Output() buscarSucursal: EventEmitter<any> = new EventEmitter();
 
+  public showFilter: boolean = false;
+
 }

@@ -1,6 +1,8 @@
-<h4 class="text-uppercase font-weight-bold">Informe de productividad</h4>
 <div class="row">
-  <div class="col-md-8">
+    <div class="col-7 col-md-12">
+        <h4 class="text-md-uppercase font-weight-bold">Informe de productividad</h4>
+    </div>
+  <div class="d-none d-md-block col-md-8">
     <div class="row">
       <div class="col-md-4">
         <mat-form-field>
@@ -56,14 +58,81 @@
       </div>
     </div>
   </div>
-  <div class="col-md-4 text-right">
+  <div class="col-5 col-md-4 mb-3 mb-md-0 text-right">
     <button type="button" class="btn btn-outline-primary mr-2">
-      <span class="font-weight-normal text-uppercase">
+      <span class="d-none d-md-block font-weight-normal text-uppercase">
         Enviar por correo</span
       >
+      <i class="d-block d-md-none fas fa-paper-plane my-1"></i>
     </button>
     <button type="button" class="btn btn-outline-primary">
-      <span class="font-weight-normal text-uppercase"> Descargar </span>
+      <span class="d-none d-md-block font-weight-normal text-uppercase"> Descargar </span>
+      <i class="d-block d-md-none fas fa-download my-1"></i>
+
     </button>
+  </div>
+  <div class="d-block d-md-none col-md-12">
+    <div class="container card">
+
+        <div class="row mt-3">
+            <div class="col-8">
+              <mat-form-field>
+                <mat-label>Sucursal</mat-label>
+                <mat-select [value]="0">
+                  <mat-option
+                    [value]="0"
+                    (click)="buscarSucursal.emit(0)"
+                    class="font-weight-bold"
+                    >Todas</mat-option
+                  >
+                  <mat-option
+                    *ngFor="let item of sucursales"
+                    [value]="item"
+                    (click)="buscarSucursal.emit(item)"
+                    class="font-weight-bold"
+                    >{{ item }}</mat-option
+                  >
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-4 text-right">
+                <i class="fas fa-2x text-muted cursor" 
+                    [ngClass]="{'fa-chevron-down': !showFilter, 'fa-chevron-up': showFilter}"
+                (click)="showFilter = !showFilter"></i>
+            </div>
+            <div *ngIf="showFilter" class="col-md-12">
+              <mat-form-field>
+                <mat-label>Periodos</mat-label>
+                <mat-select [value]="0">
+                  <mat-option [value]="0" class="font-weight-bold"
+                    >Todas</mat-option
+                  >
+                  <mat-option
+                    *ngFor="let item of periodos"
+                    [value]="item"
+                    class="font-weight-bold"
+                    >{{ item }}</mat-option
+                  >
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div *ngIf="showFilter" class="col-md-12">
+              <mat-form-field>
+                <mat-label>Meses</mat-label>
+                <mat-select [value]="0">
+                  <mat-option [value]="0" class="font-weight-bold"
+                    >Todas</mat-option
+                  >
+                  <mat-option
+                    *ngFor="let item of meses"
+                    [value]="item.id"
+                    class="font-weight-bold"
+                    >{{ item.glosa }}</mat-option
+                  >
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+    </div>
   </div>
 </div>
