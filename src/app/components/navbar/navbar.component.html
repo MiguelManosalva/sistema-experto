@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-medinet mb-4 py-0">
+    <a class="navbar-brand text-white" href="#">Logo</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Agenda</a>
+        </li>
+        <li class="nav-item active ml-2">
+          <a class="nav-link active-text" href="#">Productividad</a>
+        </li>
+      </ul>
+      <div class="col-lg-2 px-0 ml-auto">
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          placeholder="Buscar sucursal"
+          [disabled]="cargando"
+          [(ngModel)]="bsq"
+          (ngModelChange)="buscarSucursal.emit(bsq)"
+        />
+        <i class="fa fa-search form-control-icon text-medinet-01"></i>
+      </div>
+      <div class="text-white">
+        <i class="fas fa-bell fa-2x mx-3"></i>
+        <i class="fas fa-user-circle fa-2x"></i>
+      </div>
+    </div>
+  </nav>
