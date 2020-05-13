@@ -1,1 +1,110 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #d3e4f3;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input::placeholder {
+  color: #F3EDE5;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.75);
+}
+
+.bg-medinet {
+  background-color: #485e84 !important;
+}
+
+.active-text {
+  color: #2fdef1 !important;
+}
+
+.active {
+  background-color: #232b44;
+}
+
+.text-medinet-01 {
+  color: #485e84 !important;
+}
+
+.form-control-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  pointer-events: none;
+}
+
+
+.card {
+  border-radius: 0;
+  min-height: 120px;
+}
+
+.card-total-t {
+  border-radius: 0;
+  background-color: #fff;
+
+}
+
+.card-total {
+  border-radius: 0;
+  background-color: #d6dce45d;
+}
+
+.card-footer:last-child {
+  border-radius: 0;
+}
+
+.btn-outline-primary {
+  color: #4b638b;
+  border: 2px solid;
+  border-color: #4b638b;
+}
+
+
+.card-footer {
+  padding: .35rem 1.25rem;
+}
+
+.bg-footer-online {
+  background-color: #07bc85 !important;
+}
+
+.bg-footer-offline {
+  background-color: #949494 !important;
+}
+
+.font-productividad {
+  display: block;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+  .font-productividad {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .font-productividad {
+    font-size: 1.7rem;
+  }
+
+  .card {
+    border-radius: 0;
+    min-height: 20px;
+  }
+
+}
