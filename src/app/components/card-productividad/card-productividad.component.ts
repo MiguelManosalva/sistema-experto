@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-productividad',
@@ -6,16 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styles: [
   ]
 })
-export class CardProductividadComponent implements OnInit {
+export class CardProductividadComponent {
 
   @Input() productividad: any[] = [];
-
-  constructor() {
-    console.log("this.productividad: ", this.productividad);
-    
-   }
-
-  ngOnInit(): void {
-  }
 
 }

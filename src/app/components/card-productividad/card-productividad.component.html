@@ -1,7 +1,6 @@
 <div class="row">
-
-<div *ngFor="let p of productividad" class="col-md-6">
-    <div  class="card shadow mb-3">
+  <div *ngFor="let p of productividad" class="col-md-6">
+    <div class="card shadow mb-3">
       <div class="card-body py-4">
         <div class="row">
           <div class="col-8">
@@ -41,9 +40,9 @@
                     </h4>
                   </div>
                   <div class="col-6 align-self-center">
-                    <span class="font-weight-bold h4">{{
-                      p.total | formatMoney: "$"
-                    }}</span>
+                    <span class="font-weight-bold h4">
+                      {{ p.total | formatMoney: "$" }}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -53,4 +52,4 @@
       </div>
     </div>
   </div>
-  </div>
+</div>

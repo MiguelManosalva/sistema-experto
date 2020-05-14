@@ -18,7 +18,6 @@ export class ProductividadService {
       map(
         // Consulta exitosa
         (data: any) => {
-          console.log(data);
           let total: number = 0;
           let sucursales: any[] = [];
           let periodos: any[] = [];
@@ -36,11 +35,9 @@ export class ProductividadService {
             sucursales: this.eliminarRepetidos(sucursales),
             periodos: this.eliminarRepetidos(periodos),
             meses: this.eliminarMesesRepetidos(meses),
-            total
+            total: total
           };
-
-          console.log('dataProductividad: ', dataProductividad);
-
+          
           return dataProductividad;
         },
         // error en la petición
